@@ -51,6 +51,8 @@ docker build -t tengine:local .
 
 ```bash
 docker run -it --rm -p 80:80 tengine:local
+docker run -it --rm -p 80:80 jas0n0ss/tengine:amd64
+docker run -it --rm -p 80:80 jas0n0ss/tengine:arm64
 ```
 
 ### Docker Compose
@@ -59,7 +61,7 @@ docker run -it --rm -p 80:80 tengine:local
 # compose.yml
 services:
   tengine:
-    image: yourdockerhub/tengine:latest
+    image: jas0n0ss/tengine:amd64
     container_name: tengine
     ports:
       - "80:80"
